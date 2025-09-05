@@ -51,7 +51,7 @@ const TicketDetailPage = () => {
     setIsAllocating(true);
     try {
       await axios.post(
-        `https://eventx-backend-production-177a.up.railway.app/admin/allocate/${event._id}`,
+        `https://eventx-backend-production-177a.up.railway.app/admin/allocate/${event.altid}`,
         { userId: userId.trim() },
         {
           headers: {
@@ -187,7 +187,7 @@ const TicketDetailPage = () => {
             <button
               onClick={() => {
                 axios.post(
-                  `https://eventx-backend-production-177a.up.railway.app/user/event/buy/${event._id}`,
+                  `https://eventx-backend-production-177a.up.railway.app/user/event/buy/${event.altid}`,
                   {},
                   {
                     headers: {
@@ -203,7 +203,7 @@ const TicketDetailPage = () => {
             </button>
             <button
               onClick={() => {
-                navigate(`/qr/${event._id}`);
+                navigate(`/qr/${event.altid}`);
               }}
               className="bg-black  text-white px-4 py-2 rounded-lg "
             >
