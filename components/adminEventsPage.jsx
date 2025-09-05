@@ -254,7 +254,7 @@ const AdminEventsPage = () => {
                 <div
                   className="bg-blue-600 h-2 rounded-full transition-all"
                   style={{
-                    width: `${Math.min(
+                    width: `${Math.min( 
                       (event.soldSeats / event.totalSeats) * 100,
                       100
                     )}%`,

@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Search, Calendar, MapPin, Clock, Ticket } from "lucide-react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { AuthContext } from "./authProvider";
 import axios from "axios";
 
 const UserTicketsPage = () => {
   const context = useContext(AuthContext);
+  const navigate = useNavigate();
   const [tickets, setTickets] = useState([]);
   const [loading, setLoading] = useState(true);
   // eslint-disable-next-line no-unused-vars
@@ -31,9 +32,10 @@ const UserTicketsPage = () => {
             },
           }
         );
-
-        setTickets(response.data);
+        console.log(response.data);
+        setTickets(response.data === "error" ? [] : response.data);
       } catch (error) {
+        setTickets([]);
         console.error("Error fetching tickets:", error);
       } finally {
         setLoading(false);
@@ -122,16 +124,22 @@ const UserTicketsPage = () => {
               </div>
             </div>
 
-            <div className="mb-4 p-3 bg-gray-50 rounded-lg">
-              <div className="text-sm text-gray-600 mb-1">Ticket ID</div>
-            </div>
-
-            <div className="flex gap-2 w-full">
-              <Link to={`/event/${ticket.altid}`} className="grow w-full">
-                <button className="bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 px-4 rounded-lg transition-colors w-full">
-                  View Event Details
-                </button>
-              </Link>
+            <div className="flex flex-col items-center gap-3 ">
+              <button
+                onClick={() => {
+                  navigate(`/qr/${ticket.altid}`);
+                }}
+                className="bg-black  text-white px-4 py-2 rounded-lg w-full "
+              >
+                QR code
+              </button>
+              <div className="flex gap-2 w-full">
+                <Link to={`/event/${ticket.altid}`} className="grow w-full">
+                  <button className="bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 px-4 rounded-lg transition-colors w-full">
+                    View Event Details
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         ))}
