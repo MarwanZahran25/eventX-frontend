@@ -176,7 +176,7 @@ const TicketDetailPage = () => {
             </div>
 
             <button
-              onClick={() => navigate(`/admin/edit/${event._id}`)}
+              onClick={() => navigate(`/admin/edit/${event.altid}`)}
               className={`bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg mx-[30%]`}
             >
               Edit Event
