@@ -1,0 +1,100 @@
+[{
+  "email": "marwan.ahmed@gmail.com",
+  "password": "password123",
+  "role": "Admin"
+},
+{
+  "email": "fatma.mohamed@gmail.com",
+  "password": "password123",
+  "role": "User"
+},
+{
+  "email": "omar.ali@gmail.com",
+  "password": "password123",
+  "role": "User"
+},
+{
+  "email": "nour.salem@gmail.com",
+  "password": "password123",
+  "role": "User"
+},
+{
+  "email": "hassan.ahmed@gmail.com",
+  "password": "password123",
+  "role": "User"
+},
+{
+  "email": "mona.ibrahim@gmail.com",
+  "password": "password123",
+  "role": "User"
+},
+{
+  "email": "khaled.mostafa@gmail.com",
+  "password": "password123",
+  "role": "User"
+},
+{
+  "email": "sara.mahmoud@gmail.com",
+  "password": "password123",
+  "role": "User"
+},
+{
+  "email": "mahmoud.farouk@gmail.com",
+  "password": "password123",
+  "role": "User"
+},
+{
+  "email": "yasmin.nasser@gmail.com",
+  "password": "password123",
+  "role": "User"
+},
+{
+  "email": "tarek.hassan@gmail.com",
+  "password": "password123",
+  "role": "User"
+},
+{
+  "email": "dina.rashad@gmail.com",
+  "password": "password123",
+  "role": "User"
+},
+{
+  "email": "youssef.kamel@gmail.com",
+  "password": "password123",
+  "role": "User"
+},
+{
+  "email": "rana.mohamed@gmail.com",
+  "password": "password123",
+  "role": "User"
+},
+{
+  "email": "amr.sayed@gmail.com",
+  "password": "password123",
+  "role": "User"
+},
+{
+  "email": "reem.ali@gmail.com",
+  "password": "password123",
+  "role": "User"
+},
+{
+  "email": "karim.abdel@gmail.com",
+  "password": "password123",
+  "role": "User"
+},
+{
+  "email": "hala.ahmed@gmail.com",
+  "password": "password123",
+  "role": "User"
+},
+{
+  "email": "mohamed.omar@gmail.com",
+  "password": "password123",
+  "role": "User"
+},
+{
+  "email": "laila.hassan@gmail.com",
+  "password": "password123",
+  "role": "User"
+}]
