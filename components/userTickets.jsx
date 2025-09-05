@@ -124,9 +124,6 @@ const UserTicketsPage = () => {
 
             <div className="mb-4 p-3 bg-gray-50 rounded-lg">
               <div className="text-sm text-gray-600 mb-1">Ticket ID</div>
-              <div className="font-mono text-sm text-gray-800">
-                #{ticket.altid.slice(-8)}
-              </div>
             </div>
 
             <div className="flex gap-2 w-full">
