@@ -23,14 +23,17 @@ const UserTicketsPage = () => {
           return;
         }
 
-        const response = await axios.get("http://eventx-backend-production-177a.up.railway.app/user/ticket", {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const response = await axios.get(
+          "https://eventx-backend-production-177a.up.railway.app/user/ticket",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
 
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+          throw new Error(`https error! status: ${response.status}`);
         }
 
         const data = await response.json();
@@ -132,7 +135,7 @@ const UserTicketsPage = () => {
             </div>
 
             <div className="flex gap-2 w-full">
-              <Link to={`/event/${ticket._id}`} className="grow w-full">
+              <Link to={`/event/${ticket.altid}`} className="grow w-full">
                 <button className="bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 px-4 rounded-lg transition-colors w-full">
                   View Event Details
                 </button>
