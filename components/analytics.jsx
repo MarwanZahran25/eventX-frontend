@@ -53,7 +53,7 @@ const AnalyticsPage = () => {
           throw new Error("Authentication token not found.");
         }
         const response = await axios.get(
-          "http://eventx-backend-production-177a.up.railway.app/admin/analytics",
+          "https://eventx-backend-production-177a.up.railway.app/admin/analytics",
           {
             headers: {
               Authorization: `Bearer ${authContext.token}`,
@@ -61,9 +61,7 @@ const AnalyticsPage = () => {
           }
         );
 
-      
         const result = response.data;
-
 
         if (result.success) {
           setAnalytics(result.data);
@@ -164,7 +162,6 @@ const AnalyticsPage = () => {
           Analytics & Reports
         </h1>
 
-     
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           <StatCard
             icon={DollarSign}
@@ -186,9 +183,7 @@ const AnalyticsPage = () => {
           />
         </div>
 
-    
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-     
           <div className="lg:col-span-2 bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
             <h2 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
               <Users size={20} className="text-gray-500" />

@@ -19,7 +19,7 @@ const TicketDetailPage = () => {
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          `http://eventx-backend-production-177a.up.railway.app/admin/event/${id}`,
+          `https://eventx-backend-production-177a.up.railway.app/admin/event/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -51,7 +51,7 @@ const TicketDetailPage = () => {
     setIsAllocating(true);
     try {
       await axios.post(
-        `http://eventx-backend-production-177a.up.railway.app/admin/allocate/${event._id}`,
+        `https://eventx-backend-production-177a.up.railway.app/admin/allocate/${event._id}`,
         { userId: userId.trim() },
         {
           headers: {
@@ -187,7 +187,7 @@ const TicketDetailPage = () => {
             <button
               onClick={() => {
                 axios.post(
-                  `http://eventx-backend-production-177a.up.railway.app/user/event/buy/${event._id}`,
+                  `https://eventx-backend-production-177a.up.railway.app/user/event/buy/${event._id}`,
                   {},
                   {
                     headers: {
