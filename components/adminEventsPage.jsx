@@ -33,7 +33,7 @@ const AdminEventsPage = () => {
         }
 
         const response = await axios.get(
-          "http://eventx-backend-production-177a.up.railway.app/admin/event/all",
+          "https://eventx-backend-production-177a.up.railway.app/admin/event/all",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -207,7 +207,7 @@ const AdminEventsPage = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {sortedEvents.map((event) => (
           <div
-            key={event._id.oid}
+            key={event.altid}
             className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
           >
             <div className="mb-4">
@@ -265,7 +265,7 @@ const AdminEventsPage = () => {
 
             <div className="flex gap-2 w-full">
               <Link
-                to={`/event/${event._id.oid}`}
+                to={`/event/${event.altid}`}
                 className="grow w-full"
                 onClick={() => {
                   console.log(event);
@@ -276,7 +276,7 @@ const AdminEventsPage = () => {
                 </button>
               </Link>
               {isAdmin ? (
-                <Link to={`/admin/edit/${event._id.oid}`} className="grow">
+                <Link to={`/admin/edit/${event.altid}`} className="grow">
                   <button className=" bg-green-100 hover:bg-green-200 text-gray-800 py-2 px-4 rounded-lg transition-colors grow w-full">
                     edit
                   </button>
@@ -286,7 +286,7 @@ const AdminEventsPage = () => {
                   className=" bg-green-100 hover:bg-green-200 text-gray-800 py-2 px-4 rounded-lg transition-colors grow w-full"
                   onClick={() => {
                     axios.get(
-                      `http://eventx-backend-production-177a.up.railway.app/user/event/buy/${event._id.oid}`,
+                      `https://eventx-backend-production-177a.up.railway.app/user/event/buy/${event.altid}`,
                       {
                         headers: {
                           Authorization: `Bearer ${context.token}`,
