@@ -32,12 +32,7 @@ const UserTicketsPage = () => {
           }
         );
 
-        if (!response.ok) {
-          throw new Error(`https error! status: ${response.status}`);
-        }
-
-        const data = await response.json();
-        setTickets(data);
+        setTickets(response.data);
       } catch (error) {
         console.error("Error fetching tickets:", error);
       } finally {
