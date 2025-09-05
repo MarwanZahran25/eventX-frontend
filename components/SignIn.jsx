@@ -19,7 +19,7 @@ const SignIn = () => {
     let data;
     try {
       const body = { email, password };
-      data = (await axios.post("http://localhost:3000/user/signin", body)).data;
+      data = (await axios.post("http://eventx-backend-production-177a.up.railway.app/user/signin", body)).data;
       localStorage.setItem("token", data.token);
       localStorage.setItem("role", data.isAdmin ? "Admin" : "User");
       authObj.setAuthObj((obj) => {

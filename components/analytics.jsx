@@ -53,7 +53,7 @@ const AnalyticsPage = () => {
           throw new Error("Authentication token not found.");
         }
         const response = await axios.get(
-          "http://localhost:3000/admin/analytics",
+          "http://eventx-backend-production-177a.up.railway.app/admin/analytics",
           {
             headers: {
               Authorization: `Bearer ${authContext.token}`,

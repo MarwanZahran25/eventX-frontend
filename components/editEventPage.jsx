@@ -23,7 +23,7 @@ const EditEventForm = () => {
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          `http://localhost:3000/admin/event/${id}`,
+          `http://eventx-backend-production-177a.up.railway.app/admin/event/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -72,7 +72,7 @@ const EditEventForm = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await fetch(
-        `http://localhost:3000/admin/event/update/${id}`,
+        `http://eventx-backend-production-177a.up.railway.app/admin/event/update/${id}`,
         {
           method: "POST",
           headers: {

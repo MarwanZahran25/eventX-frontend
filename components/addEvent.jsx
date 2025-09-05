@@ -26,7 +26,7 @@ const AddEventForm = () => {
 
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:3000/admin/event/add", {
+      const response = await fetch("http://eventx-backend-production-177a.up.railway.app/admin/event/add", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,

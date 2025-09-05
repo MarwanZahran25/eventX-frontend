@@ -33,7 +33,7 @@ const AdminEventsPage = () => {
         }
 
         const response = await axios.get(
-          "http://localhost:3000/admin/event/all",
+          "http://eventx-backend-production-177a.up.railway.app/admin/event/all",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -286,7 +286,7 @@ const AdminEventsPage = () => {
                   className=" bg-green-100 hover:bg-green-200 text-gray-800 py-2 px-4 rounded-lg transition-colors grow w-full"
                   onClick={() => {
                     axios.get(
-                      `http://localhost:3000/user/event/buy/${event._id.oid}`,
+                      `http://eventx-backend-production-177a.up.railway.app/user/event/buy/${event._id.oid}`,
                       {
                         headers: {
                           Authorization: `Bearer ${context.token}`,

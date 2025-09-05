@@ -23,7 +23,7 @@ const UserTicketsPage = () => {
           return;
         }
 
-        const response = await axios.get("http://localhost:3000/user/ticket", {
+        const response = await axios.get("http://eventx-backend-production-177a.up.railway.app/user/ticket", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
