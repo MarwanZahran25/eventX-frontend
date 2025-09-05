@@ -15,11 +15,16 @@ import {
   Megaphone,
 } from "lucide-react";
 import { Link } from "react-router";
+import { useContext } from "react";
 
 export default function NavBar() {
+  const auth = useContext(AuthContext);
   function onClick() {
     localStorage.removeItem("token");
     localStorage.removeItem("role");
+    auth.setAuthObj((prev) => {
+      return { ...prev, isAdmin: false, isLoggedIn: false };
+    });
   }
   const navLinks = {
     "Main Navigation": [
